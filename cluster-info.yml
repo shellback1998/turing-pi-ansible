@@ -27,3 +27,8 @@
     - name: Display IPv4 address
       ansible.builtin.debug:
         msg: "IP address: {{ ansible_default_ipv4.address }}"
+
+    - name: Get Docker version
+      ansible.builtin.command: docker --version
+      register: docker_version
+      changed_when: false
