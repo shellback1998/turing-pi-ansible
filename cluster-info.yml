@@ -22,8 +22,8 @@
 
     - name: Display total memory
       ansible.builtin.debug:
-        msg: "Memor: {{ ansible_memtotal_mb }} MB"
+        msg: "Memory: {{ ansible_memtotal_mb }} MB"
 
     - name: Display IPv4 address
-      ansible.builtin.debug
+      ansible.builtin.debug:
         msg: "IP address: {{ ansible.default_ipv4.address }}"
