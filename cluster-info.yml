@@ -3,5 +3,6 @@
   hosts: turing_cluster
   gather_facts: true
 
-  
+
   tasks:
+    -  name: Display hostname
