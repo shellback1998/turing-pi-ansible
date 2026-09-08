@@ -6,3 +6,5 @@
 
   tasks:
     -  name: Display hostname
+      ansible.builtin.debug:
+        msg: "Hostname: {{ ansible_hostname }}"
