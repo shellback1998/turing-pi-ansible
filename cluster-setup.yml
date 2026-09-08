@@ -15,3 +15,11 @@
         path: /opt/turing-cluster
         state: directory
         mode: "0755"
+    
+    - name: Create cluster information file
+      ansible.builtin.copy:
+        dest: /opt/turing-cluster/README.txt
+        content: |
+          Turing Pi Cluster
+          Managed by Ansible
+        mode: "0644"
