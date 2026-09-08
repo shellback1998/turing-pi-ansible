@@ -23,4 +23,5 @@
           Turing Pi Cluster
           Managed by Ansible
           Hostname: {{ ansible_hostname }}
+          IP Address: {{ ansible_default_ipv4.address }}
         mode: "0644"
