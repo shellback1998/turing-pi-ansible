@@ -1,3 +1,7 @@
 ---
 - name: Turing Pi Cluster Information
   hosts: turing_cluster
+  gather_facts: true
+
+  
+  tasks:
