@@ -15,3 +15,11 @@
     - name: Display architecture
       ansible.builtin.debug:
         msg: "Architecture: {{ ansible_architecture }}"
+
+    - name: Display processor core count
+      ansible.builtin.debug:
+        msg: "CPU cores: {{ ansible_processor_vcpus }}"
+
+    - name: Display total memory
+      ansible.builtin.debug:
+        msg: "Memor: {{ ansible_memtotal_mb }} MB"
