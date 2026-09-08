@@ -7,3 +7,7 @@
     - name: Display hostname
       ansible.builtin.debug:
         msg: "Hostname: {{ ansible_hostname }}"
+    
+    - name: Display operating system
+      ansible.builtin.debug:
+        msg: "OS: {{ ansible_distribution }} {{ ansible_distribution_version }}"
