@@ -5,7 +5,7 @@
 
 
   tasks:
-    - name: Ensure htop is installed
+    - name: Ensure tree is installed
       ansible.builtin.apt:
-        name: htop
+        name: tree
         state: present
