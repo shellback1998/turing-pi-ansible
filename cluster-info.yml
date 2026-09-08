@@ -36,3 +36,8 @@
     - name: Display Docker version
       ansible.builtin.debug:
         msg: "{{ docker_version.stdout }}"
+
+    - name: Get root disk usage
+      ansible.builtin.command: df -h /
+      register: disk_usage
+      changed_when: false
