@@ -32,3 +32,7 @@
       ansible.builtin.command: docker --version
       register: docker_version
       changed_when: false
+
+    - name: Display Docker version
+      ansible.builtin.debug:
+        msg: "{{ docker_version.stdout }}"
