@@ -22,4 +22,5 @@
         content: |
           Turing Pi Cluster
           Managed by Ansible
+          Hostname: {{ ansible_hostname }}
         mode: "0644"
