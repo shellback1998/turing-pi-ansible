@@ -26,4 +26,4 @@
 
     - name: Display IPv4 address
       ansible.builtin.debug:
-        msg: "IP address: {{ ansible.default_ipv4.address }}"
+        msg: "IP address: {{ ansible_default_ipv4.address }}"
