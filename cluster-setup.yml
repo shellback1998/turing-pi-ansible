@@ -9,3 +9,9 @@
       ansible.builtin.apt:
         name: htop
         state: present
+
+    - name: Ensure cluster info directory exists
+      ansible.builtin.file:
+        path: /opt/turing-cluster
+        state: directory
+        mode: "0755"
