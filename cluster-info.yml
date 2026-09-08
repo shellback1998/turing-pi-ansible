@@ -41,3 +41,7 @@
       ansible.builtin.command: df -h /
       register: disk_usage
       changed_when: false
+
+    - name: Display root disk usage
+      ansible.builtin.debug:
+        msg: "{{ disk_usage.stdout_lines[1] }}"
