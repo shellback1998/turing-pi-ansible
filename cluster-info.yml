@@ -3,8 +3,7 @@
   hosts: turing_cluster
   gather_facts: true
 
-
   tasks:
-    -  name: Display hostname
+    - name: Display hostname
       ansible.builtin.debug:
         msg: "Hostname: {{ ansible_hostname }}"
