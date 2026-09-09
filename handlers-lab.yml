@@ -1,0 +1,6 @@
+---
+- name: Ansible Handlers Lab
+  hosts: turing_cluster
+  become: true
+
+  tasks:
