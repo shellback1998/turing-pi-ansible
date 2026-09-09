@@ -20,8 +20,20 @@
         mode: "0644"
       notify: Handler test message
 
+    - name: Create SSH banner configuration
+      ansible.builtin.copy:
+        dest: /etc/ssh/sshd_config.d/turing-banner.conf
+        content: |
+          Banner /etc/issue.net
+        mode: "0644"
+      notify: Restart SSH service
+
   handlers:
     - name: Handler test message
       ansible.builtin.debug:
         msg: "The configuration changed, so the handler ran."
 
+    - name: Restart SSH service
+      ansible.builtin.service:
+        name: ssh
+        state: restarted
