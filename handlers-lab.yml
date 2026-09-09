@@ -8,7 +8,7 @@
       ansible.builtin.copy:
         dest: /tmp/handler-test.conf
         content: |
-          Turing Pi Handler Test
+          Turing Pi Handler Test - Updated
         mode: "0644"
       notify: Handler test message
 
@@ -16,7 +16,7 @@
       ansible.builtin.copy:
         dest: /tmp/handler-test-2.conf
         content: |
-          Second Turing Pi Handler Test
+          Second Turing Pi Handler Test - Updated
         mode: "0644"
       notify: Handler test message
 
