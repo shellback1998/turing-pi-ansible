@@ -6,11 +6,11 @@
   tasks:
     - name: Display cluster name
       ansible.builtin.debug:
-        msg: "cluster: {{ cluster_name }}"
+        msg: "Cluster: {{ cluster_name }}"
 
     - name: Display node node_role
       ansible.builtin.debug:
-      msg: "Role: {{ node_role }}"
+       msg: "Role: {{ node_role }}"
 
     - name: Display hostname
       ansible.builtin.debug:
