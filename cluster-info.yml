@@ -8,11 +8,11 @@
       ansible.builtin.debug:
         msg: "Cluster: {{ cluster_name }}"
 
-    - name: Display node node_role
+    - name: Display node role
       ansible.builtin.debug:
        msg: "Role: {{ node_role }}"
 
-    - name: Display node node_location
+    - name: Display node location
       ansible.builtin.debug:
         msg: "Location: {{ node_location }}"
 
