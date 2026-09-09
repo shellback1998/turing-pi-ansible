@@ -4,3 +4,23 @@
   become: true
 
   tasks:
+    - name: Create handler test configuration
+      ansible.builtin.copy:
+        dest: /tmp/handler-test.conf
+        content: |
+          Turing Pi Handler Test
+        mode: "0644"
+      notify: Handler test message
+
+  handlers:
+    - name: Handler test message
+      ansible.builtin.debug:
+        msg: "The configuration changed, so the handler ran."
+
+    - name: Create second handler test configuration
+      ansible.builtin.copy:
+        dest: /tmp/handler-test-2.conf
+        content: |
+          Second Turing Pi Handler Test
+        mode: "0644"
+      notify: Handler test message
