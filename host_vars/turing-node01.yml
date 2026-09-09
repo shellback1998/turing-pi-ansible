@@ -1,2 +1,3 @@
 ---
 node_description: "Turing Pi control plane and management node"
+node_location: "Management Node"
