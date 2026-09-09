@@ -4,6 +4,10 @@
   gather_facts: true
 
   tasks:
+    - name: Display cluster name
+      ansible.builtin.debug:
+        msg: "cluster: {{ cluster_name }}"
+
     - name: Display hostname
       ansible.builtin.debug:
         msg: "Hostname: {{ ansible_hostname }}"
