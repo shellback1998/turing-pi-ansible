@@ -18,7 +18,7 @@
 
     - name: Display node description
       ansible.builtin.debug:
-        msg: "Description: {{ node_description | default ( ' Standard cluster worker' ) }}"
+        msg: "Description: {{ node_description | default ( 'Standard cluster worker' ) }}"
 
     - name: Display hostname
       ansible.builtin.debug:
