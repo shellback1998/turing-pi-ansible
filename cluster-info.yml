@@ -12,6 +12,10 @@
       ansible.builtin.debug:
        msg: "Role: {{ node_role }}"
 
+    - name: Display node node_location
+      ansible.builtin.debug:
+        msg: "Location: {{ node_location }}"
+
     - name: Display hostname
       ansible.builtin.debug:
         msg: "Hostname: {{ ansible_hostname }}"
