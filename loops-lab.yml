@@ -1,0 +1,6 @@
+---
+- name: Ansible Loops Lab
+  hosts: turing_cluster
+  become: true
+
+  tasks:
