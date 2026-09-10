@@ -13,3 +13,13 @@
         - loop-test-1.txt
         - loop-test-2.txt
         - loop-test-3.txt
+
+    - name: Create cluster info files
+      ansible.builtin.copy:
+        dest: "/tmp/ {{ item.filename }}"
+        content: " {{ item.content }}"
+        mode: "0644"
+      loop:
+        - filename: node-role.txt
+          content: "Role: {{ node_role }}"
+        - filename: "Location: {{ node_location }}"
