@@ -37,7 +37,13 @@
 
     - name: Check installed software versions
       ansible.builtin.command: "{{ item }}"
+      register: software_versions #Added this to actually see the versions.. Needed to add the following task
       changed_when: false
       loop:
         - "docker --version"
         - "python3 --version"
+
+    - name: Display installed software versions
+      ansible.builtin.debug:
+        msg: "{{ item.stdout }}"
+      loop: "{{ software_versions.results }}"
