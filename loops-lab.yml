@@ -16,10 +16,11 @@
 
     - name: Create cluster info files
       ansible.builtin.copy:
-        dest: "/tmp/ {{ item.filename }}"
-        content: " {{ item.content }}"
+        dest: "/tmp/{{ item.filename }}"
+        content: "{{ item.content }}"
         mode: "0644"
       loop:
         - filename: node-role.txt
           content: "Role: {{ node_role }}"
-        - filename: "Location: {{ node_location }}"
+        - filename: node-location.txt
+          content: "Location: {{ node_location }}"
