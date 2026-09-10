@@ -24,3 +24,20 @@
           content: "Role: {{ node_role }}"
         - filename: node-location.txt
           content: "Location: {{ node_location }}"
+
+    # - name: Ensure useful packages are installed
+    #   ansible.builtin.apt:
+    #     name: "{{ item }}"
+    #     state: present
+    #     update_cache: false
+    #   loop:
+    #     - htop
+    #     - curl
+    #     - git
+
+    - name: Check installed software versions
+      ansible.builtin.command: "{{ item }}"
+      changed_when: false
+      loop:
+        - "docker --version"
+        - "python3 --version"
