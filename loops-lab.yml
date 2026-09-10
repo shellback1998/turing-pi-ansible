@@ -49,3 +49,14 @@
       loop: "{{ software_versions.results }}"
       loop_control: #Added this to make the results more cleaner
         label: " {{ item.item }}" #Added this to make the results more cleaner
+
+    - name: Remove loop lab temporary files
+      ansible.builtin.file:
+        path: "/tmp/{{ item }}"
+        state: absent
+      loop:
+        - loop-test-1.txt
+        - loop-test-2.txt
+        - loop-test-3.txt
+        - node-role.txt
+        - node-location.txt
