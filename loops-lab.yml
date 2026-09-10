@@ -47,3 +47,5 @@
       ansible.builtin.debug:
         msg: "{{ item.stdout }}"
       loop: "{{ software_versions.results }}"
+      loop_control:
+        label: " {{ item.item }}"
